@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+    <test name="test1">
+        <!-- browser setup-->
+        <parameter name="browser" value="CH" />
+        <groups>
+            <define name="all">
+                <include name="group1"/>
+                <include name="group2"/>
+
+            </define>
+            <run>
+                <include name="all"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="GoogleTestScript" />
+        </classes>
+     </test>
+</suite>
